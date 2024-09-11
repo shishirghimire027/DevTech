@@ -2,7 +2,8 @@ function App() {
   return (
     <div className="App">
       <h1>Changes for main branch</h1>
-      <h1> Chnages Made by Shishir</h1>
+      <h1> Changes Made by Shishir</h1>
+      <h1> Second Change Made by Main</h1>
     </div>
   );
 }
