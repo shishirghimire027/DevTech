@@ -1,0 +1,80 @@
+/* General navbar styles */
+.active-link {
+  color: rgba(190, 49, 68, 0.9) !important;
+}
+
+.nav-link {
+  color: black !important;
+  margin-left: 10px;
+}
+
+.dropdown-menu a.dropdown-item:hover {
+  background-color: transparent !important;
+  font-weight: 600;
+}
+
+/* Container styles to position elements correctly */
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+/* Align nav links to the right for larger screens */
+.nav {
+  display: flex;
+  justify-content: flex-end; /* Keep links aligned to the right on larger screens */
+  align-items: center;
+  margin-left: auto;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack logo and nav vertically on small screens */
+    align-items: flex-start; /* Align items to the left */
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start; /* Align the links to the left */
+    align-items: flex-start;
+    width: 100%; /* Ensure nav takes up full width */
+    margin-top: 10px; /* Space below the logo */
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+    margin-left: auto;
+  }
+
+  .nav-item {
+    margin: 10px 0;
+  }
+
+  .nav-link {
+    margin-left: 0; /* Remove margin for left alignment on small screens */
+  }
+}
