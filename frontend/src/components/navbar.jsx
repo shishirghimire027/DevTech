@@ -22,10 +22,13 @@ function Navbar() {
           position: "sticky",
           zIndex: "1000",
           width: "100%",
-          height: 'auto'
+          height: "auto",
         }}
       >
-        <div className="container" style={{display: "flex", flexDirection: "row"}}>
+        <div
+          className="container"
+          style={{ display: "flex", flexDirection: "row" }}
+        >
           <div className="navbar-header">
             <a className="navbar-brand" href="#">
               <img
@@ -33,74 +36,78 @@ function Navbar() {
                 style={{ width: "100px", height: "70px", objectFit: "cover" }}
               />
             </a>
-            </div>
+          </div>
 
-            {/* Hamburger Icon */}
-            <div className="hamburger" onClick={toggleMenu}>
-              <span className="bar"></span>
-              <span className="bar"></span>
-              <span className="bar"></span>
-            </div>
+          {/* Hamburger Icon */}
+          <div className="hamburger" onClick={toggleMenu}>
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+          </div>
 
-            {/* Menu items */}
-            <ul className={`nav nav-underline justify-content-center ${isOpen ? "open" : ""}`}>
-              <li className="nav-item">
-                <NavLink
-                  to="/"
-                  className="nav-link"
-                  activeClassName="active-link"
-                >
-                  Home
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  to="/about"
-                  className="nav-link"
-                  activeClassName="active-link"
-                >
-                  About us
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  to="/services"
-                  className="nav-link"
-                  activeClassName="active-link"
-                >
-                  Services
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  to="/projects"
-                  className="nav-link"
-                  activeClassName="active-link"
-                >
-                  Projects
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  to="/career"
-                  className="nav-link"
-                  activeClassName="active-link"
-                >
-                  Career
-                </NavLink>
-              </li>
-              <li className="nav-item">
+          {/* Menu items */}
+          <ul
+            className={`nav nav-underline justify-content-center ${
+              isOpen ? "open" : ""
+            }`}
+          >
+            <li className="nav-item">
+              <NavLink
+                to="/"
+                className="nav-link"
+                activeClassName="active-link"
+              >
+                Home
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                to="/about"
+                className="nav-link"
+                activeClassName="active-link"
+              >
+                About us
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                to="/services"
+                className="nav-link"
+                activeClassName="active-link"
+              >
+                Services
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                to="/projects"
+                className="nav-link"
+                activeClassName="active-link"
+              >
+                Projects
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                to="/career"
+                className="nav-link"
+                activeClassName="active-link"
+              >
+                Career
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/Contact">
                 <button
-                  to="/contact"
                   className=" btn btn-dark"
                   activeClassName="active-link"
                   style={{ borderRadius: "10px", marginLeft: "10px" }}
                 >
                   Contact
                 </button>
-              </li>
-            </ul>
-          
+              </NavLink>
+            </li>
+          </ul>
         </div>
       </nav>
     </div>
