@@ -1,0 +1,236 @@
+/* Resetting some browser defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.admin-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #f5f7fa;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-radius: 12px;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #2d3748;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.admin-job-management {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 20px 0;
+}
+
+/* Job Form Styling */
+.admin-job-form {
+  flex: 1;
+  background-color: #fff;
+  padding: 25px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.admin-job-form h2 {
+  margin-bottom: 25px;
+  font-size: 22px;
+  color: #333;
+}
+
+.admin-job-form label {
+  display: block;
+  font-size: 16px;
+  color: #4a5568;
+  margin-bottom: 8px;
+}
+
+.admin-job-form input,
+.admin-job-form textarea,
+.admin-job-form select {
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background-color: #f7fafc;
+}
+
+.admin-job-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.admin-job-form button {
+  width: 100%;
+  padding: 14px;
+  background-color: #3182ce;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.admin-job-form button:hover {
+  background-color: #2b6cb0;
+}
+
+.admin-success, .admin-error {
+  text-align: center;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.admin-success {
+  background-color: #e6fffa;
+  color: #2c7a7b;
+  border: 1px solid #b2f5ea;
+}
+
+.admin-error {
+  background-color: #fff5f5;
+  color: #c53030;
+  border: 1px solid #feb2b2;
+}
+
+/* Job Listings Styling */
+.admin-job-list {
+  flex: 1;
+  padding-top: 0;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  max-height: 1100px;
+  /* width: 600px; */
+  overflow-y: auto;
+  position: relative; /* Add this to create a new stacking context */
+}
+
+.admin-job-list h2 {
+  position: sticky;
+  top: 0;
+  margin-bottom: 20px;
+  color: #333;
+  background-color: #fff;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  z-index: 1; /* Keep the sticky header on top */
+}
+
+.admin-job-item {
+  background-color: #edf2f7;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  margin-right: 25px;
+  margin-left: 25px;
+}
+
+.admin-job-item h3 {
+  font-size: 20px;
+  color: #2d3748;
+  margin-bottom: 12px;
+}
+
+.admin-job-item p {
+  font-size: 16px;
+  color: #4a5568;
+  margin-bottom: 8px;
+}
+
+.admin-job-item p:last-child {
+  margin-bottom: 0;
+}
+
+.admin-job-item button {
+  padding: 8px 15px;
+  margin-right: 10px;
+  background-color: #2b6cb0;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.admin-job-item button:last-child {
+  background-color: #e53e3e;
+}
+
+.admin-job-item button:hover {
+  opacity: 0.85;
+}
+
+.admin-job-item button:last-child:hover {
+  background-color: #c53030;
+}
+
+.admin-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  padding: 0 20px;
+  gap: 8px;
+}
+
+.admin-pagination button {
+  background-color: #3182ce;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  min-width: 45px;
+  min-height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-pagination button:hover {
+  background-color: #2b6cb0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.admin-pagination button:disabled {
+  background-color: #cbd5e0;
+  color: #a0aec0;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.admin-pagination button.active {
+  background-color: #2b6cb0;
+  font-weight: bold;
+  border: 2px solid #2c5282;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.1);
+}
+
+.admin-pagination-arrow:hover {
+  background-color: #2b6cb0;
+  transform: translateY(-2px);
+}
+
+.admin-pagination-arrow:disabled {
+  background-color: #cbd5e0;
+  color: #a0aec0;
+  cursor: not-allowed;
+}

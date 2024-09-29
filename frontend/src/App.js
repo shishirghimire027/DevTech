@@ -1,4 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Career from "./pages/Career";
+import Admin from "./pages/admin";
 
 
 function App() {
@@ -7,7 +9,11 @@ function App() {
       {/* Ensure BrowserRouter wraps all Routes */}
       <BrowserRouter>
      
-        <Routes></Routes>
+        <Routes>
+          <Route path="/" element={<Career />} />
+          <Route path="/admin" element={<Admin />} />
+
+        </Routes>
        
       </BrowserRouter>
     </div>
